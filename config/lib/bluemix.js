@@ -3,9 +3,9 @@
 module.exports.getServiceCreds = (name) => {
     if (process.env.VCAP_SERVICES) {
         var services = JSON.parse(process.env.VCAP_SERVICES);
-        for (var service_name in services) {
-            if (service_name.indexOf(name) === 0) {
-                var service = services[service_name][0];
+        for (var serviceName in services) {
+            if (serviceName.indexOf(name) === 0) {
+                var service = services[serviceName][0];
                 return {
                     url: service.credentials.url,
                     username: service.credentials.username,

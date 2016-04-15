@@ -22,7 +22,7 @@ var setUpWinston = () => {
     };
 
     winston.loggers.add('fanwish', {
-        transports: [ new (winston.transports.Console)({level: 'verbose'}) ]
+        transports: [new (winston.transports.Console)({level: 'verbose'})]
     });
 };
 
@@ -33,8 +33,8 @@ module.exports = (app) => {
         var url = req.url;
         var params;
 
-        if(req.method == 'GET') {
-            if(url.indexOf('?') >= 0) {
+        if (req.method == 'GET') {
+            if (url.indexOf('?') >= 0) {
                 url = url.substring(0, url.indexOf('?'));
             }
             params = toSecureParams(req.query);
@@ -54,7 +54,7 @@ module.exports = (app) => {
 
     var toSecureParams = (obj) => {
         var params = {};
-        for(var param in obj) {
+        for (var param in obj) {
             params[param] = obj[param];
             if (/password/i.test(param)) {
                 params[param] = '*****';

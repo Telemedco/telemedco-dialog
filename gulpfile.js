@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     stylish = require('gulp-jscs-stylish');
 
 gulp.task('default', () => {
-    gulp.src([ './modules/**/**/*.js' ])
+    gulp.src([ './modules/**/**/*.js', './config/**/*.js' ])
         .pipe(jscs())
         .pipe(stylish());
 });
