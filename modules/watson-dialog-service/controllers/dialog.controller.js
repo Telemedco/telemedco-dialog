@@ -7,15 +7,15 @@ var dialogService = require('../services/dialog.service'),
     _ = require('lodash'),
     extend = require('util')._extend;
 
-exports.create = function(req, res, next) {
+exports.create = (req, res, next) => {
     return dialogValidator.validate(req.body)
-        .then(function(dialog) {
+        .then((dialog) => {
             return dialogService.createDialog(dialog);
         })
-        .then(function(data) {
+        .then((data) => {
             res.status(201).json(data);
         })
-        .catch(function(err) {
+        .catch((err) => {
             if (_.get(err, 'name') === 'ValidationError') {
                 res.status(400).json(err.details || []);
             } else {
@@ -24,10 +24,12 @@ exports.create = function(req, res, next) {
         });
 };
 
-exports.conversation = function(req, res, next) {
-    var params = extend({ dialog_id: watsonDialog.dialog_id }, req.body);
+exports.conversation = (req, res, next) => {
+    // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
+    var params = extend({ dialog_id: watsonDialog.dialogId }, req.body);
+    // jscs:enable requireCamelCaseOrUpperCaseIdentifiers
 
-    watsonDialog.dialog.conversation(params, function(err, results) {
+    watsonDialog.dialog.conversation(params, (err, results) => {
         if (err) {
             return next(err);
         } else {
@@ -36,17 +38,21 @@ exports.conversation = function(req, res, next) {
                 results.choice = choice;
             }
 
+            // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
             res.status(200).json({
-                dialog_id: watsonDialog.dialog_id,
+                dialog_id: watsonDialog.dialogId,
                 conversation: results
             });
+            // jscs:enable requireCamelCaseOrUpperCaseIdentifiers
         }
     });
 };
 
-exports.profile = function(req, res, next) {
-    var params = extend({ dialog_id: watsonDialog.dialog_id }, req.body);
-    watsonDialog.dialog.getProfile(params, function(err, results) {
+exports.profile = (req, res, next) => {
+    // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
+    var params = extend({ dialog_id: watsonDialog.dialogId }, req.body);
+    // jscs:enable requireCamelCaseOrUpperCaseIdentifiers
+    watsonDialog.dialog.getProfile(params, (err, results) => {
         if (err) {
             return next(err);
         } else {

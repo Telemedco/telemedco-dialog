@@ -4,11 +4,11 @@ var config = require('../config'),
     chalk = require('chalk'),
     mongoose = require('mongoose');
 
-module.exports.connect = function(cb) {
+module.exports.connect = (cb) => {
     var _this = this,
         db;
 
-    db = mongoose.connect(config.db.uri, config.db.options, function(err) {
+    db = mongoose.connect(config.db.uri, config.db.options, (err) => {
         if (err) {
             console.error(chalk.red('Could not connect to MongoDB!'));
             console.log(err);
@@ -19,8 +19,8 @@ module.exports.connect = function(cb) {
     });
 };
 
-module.exports.disconnect = function(cb) {
-    mongoose.disconnect(function(err) {
+module.exports.disconnect = (cb) => {
+    mongoose.disconnect((err) => {
         console.info(chalk.yellow('Disconnected from MongoDB.'));
         cb(err);
     });

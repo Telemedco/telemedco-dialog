@@ -4,12 +4,12 @@ var winston = require('winston'),
     util    = require('util'),
     colors  = require('colors');
 
-var setUpWinston = function() {
+var setUpWinston = () => {
     winston.level = 'verbose';
 
     // Log the Error message too as otherwise Winston only logs the stack trace.
     var oldError = winston.log;
-    winston.log = function() {
+    winston.log = () => {
         var newArgs = [];
         for (var i = 0; i < arguments.length; i++) {
             var arg = arguments[i];
@@ -26,10 +26,10 @@ var setUpWinston = function() {
     });
 };
 
-module.exports = function(app) {
+module.exports = (app) => {
     setUpWinston();
 
-    app.use(function (req, res, next) {
+    app.use((req, res, next) => {
         var url = req.url;
         var params;
 
@@ -52,7 +52,7 @@ module.exports = function(app) {
         next();
     });
 
-    var toSecureParams = function(obj) {
+    var toSecureParams = (obj) => {
         var params = {};
         for(var param in obj) {
             params[param] = obj[param];

@@ -3,7 +3,7 @@
 var validator = {},
     Joibird = require('joibird');
 
-validator.validate = function(user) {
+validator.validate = (user) => {
     var userSchema = Joibird
         .object().keys({
             firstName: Joibird.string().required(),

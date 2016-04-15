@@ -2,7 +2,7 @@
 
 var dialogs = require('../controllers/dialog.controller');
 
-module.exports = function(app) {
+module.exports = (app) => {
     app.route('/conversation/history')
         .post(dialogs.create);
 

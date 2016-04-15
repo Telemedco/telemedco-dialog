@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports.getServiceCreds = function(name) {
+module.exports.getServiceCreds = (name) => {
     if (process.env.VCAP_SERVICES) {
         var services = JSON.parse(process.env.VCAP_SERVICES);
         for (var service_name in services) {

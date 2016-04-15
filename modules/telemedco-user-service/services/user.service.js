@@ -3,7 +3,7 @@
 var service = {},
     User = require('../models/user.model');
 
-service.createUser = function(user) {
+service.createUser = (user) => {
     user = new User(user);
     return user.saveAsync();
 };

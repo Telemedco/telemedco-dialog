@@ -5,8 +5,8 @@ var config = require('../config'),
     express = require('./express'),
     chalk = require('chalk');
 
-module.exports.init = function init(done) {
-    mongoose.connect(function(db) {
+module.exports.init = (done) => {
+    mongoose.connect((db) => {
         var app = express.init(db);
         if (done) done(app, db, config);
     });
@@ -15,8 +15,8 @@ module.exports.init = function init(done) {
 module.exports.start = function start(done) {
     var _this = this;
 
-    _this.init(function(app, db, config) {
-        app.listen(config.port, function() {
+    _this.init((app, db, config) => {
+        app.listen(config.port, () => {
             console.log(chalk.yellow('--'));
             console.log(chalk.green(config.title));
             console.log();

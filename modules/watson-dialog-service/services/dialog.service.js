@@ -3,7 +3,7 @@
 var service = {},
     Dialog = require('../models/dialog.model');
 
-service.createDialog = function(dialog) {
+service.createDialog = (dialog) => {
     dialog = new Dialog(dialog);
     return dialog.saveAsync();
 };

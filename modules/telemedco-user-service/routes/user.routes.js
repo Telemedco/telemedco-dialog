@@ -2,7 +2,7 @@
 
 var users = require('../controllers/user.controller');
 
-module.exports = function(app) {
+module.exports = (app) => {
     app.route('/api/users')
         .post(users.create);
 };
