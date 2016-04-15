@@ -13,7 +13,7 @@
 'use strict';
 
 var async = require('async'),
-    bluemix = require('../config/bluemix'),
+    bluemix = require('../config/lib/bluemix'),
     fs = require('fs'),
     path = require('path'),
     request = require('request');
@@ -172,5 +172,6 @@ function updateDialogFiles(credentials) {
     }
 }
 
-
-updateDialogFiles(bluemix.getServiceCreds('dialog'));
+if (process.env.NODE_ENV != 'travis') {
+    updateDialogFiles(bluemix.getServiceCreds('dialog'));
+}
