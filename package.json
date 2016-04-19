@@ -1,32 +1,33 @@
 {
-  "name": "DialogNodejsStarterApp",
-  "version": "0.1.8",
-  "description": "A sample nodejs app for Bluemix that use the Dialog",
+  "name": "TelemedcoWatsonService",
+  "version": "1.0.0",
+  "description": "Telemedco Wtason Dialog Service Conversation",
+  "private": true,
   "engines": {
     "node": ">=0.10.38"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/watson-developer-cloud/dialog-nodejs.git"
+    "url": "https://github.com/ENO8/telemedco-dialog.git"
   },
-  "author": "IBM Corp.",
+  "author": "Aruljothi Kuppusamy <jak.jothi@gmail.com>",
   "contributors": [
     {
-      "name": "James Zhang",
-      "email": "jzhang300@us.ibm.com"
+      "name": "Aruljothi Kuppusamy",
+      "email": "jak.jothi@gmail.com"
     },
     {
-      "name": "Eva Xiaohui Luo",
-      "email": "evaluo_xhl@us.ibm.com"
+      "name": "Scott Hutchinson",
+      "email": "sjehutch@gmail.com"
     },
     {
-      "name": "German Attanasio Ruiz",
-      "email": "germanatt@us.ibm.com"
+      "name": "Xavier Babu",
+      "email": "xavierbabu.a@gmail.com"
     }
   ],
-  "license": "Apache-2.0",
+  "license": "private",
   "bugs": {
-    "url": "https://github.com/watson-developer-cloud/dialog-nodejs/issues"
+    "url": "https://github.com/ENO8/telemedco-dialog/issues"
   },
   "scripts": {
     "start": "node app.js",
@@ -34,12 +35,25 @@
   },
   "dependencies": {
     "async": "^1.5.1",
-    "body-parser": "~1.14.1",
+    "bluebird": "^3.3.5",
+    "body-parser": "^1.14.2",
+    "chalk": "^1.1.3",
     "cloudant": "^1.4.1",
-    "errorhandler": "~1.4.1",
-    "express": "~4.13.3",
-    "lodash": "^4.8.1",
+    "colors": "^1.1.2",
+    "errorhandler": "^1.4.3",
+    "express": "^4.13.4",
+    "glob": "^7.0.3",
+    "joi": "^8.0.5",
+    "joibird": "^1.0.0",
+    "lodash": "^4.11.1",
+    "method-override": "^2.3.5",
     "request": "^2.67.0",
-    "watson-developer-cloud": "~1.0.6"
+    "watson-developer-cloud": "^1.0.6",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jscs": "^3.0.2",
+    "gulp-jscs-stylish": "^1.3.0"
   }
 }

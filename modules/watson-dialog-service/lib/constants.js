@@ -1,8 +1,8 @@
 'use strict';
 
 var yesOrNo = {
-	items: ['no', 'yes'],
-	type: 'yesorno'
+    items: ['no', 'yes'],
+    type: 'yesorno'
 };
 
 module.exports = {
