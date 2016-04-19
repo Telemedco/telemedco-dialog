@@ -1,0 +1,526 @@
+{
+    "tests": [
+        {
+            "name": "Glucose, Serum",
+            "result": "96",
+            "flag": "Normal",
+            "units": "mg/dL",
+            "field-1": null,
+            "referenceInterval": ["65-99"],
+            "lab": "TA"
+        },
+        {
+            "name": "DDIMER",
+            "result": "< 250",
+            "flag": "High",
+            "units": "mg/dL",
+            "field-1": null,
+            "referenceInterval": [],
+            "lab": "TA"
+        },
+        {
+            "name": "BNP",
+            "result": "600",
+            "flag": "High",
+            "units": "pg/mL",
+            "field-1": null,
+            "referenceInterval": [],
+            "lab": "TA"
+        },
+        {
+            "name": "CKMB",
+            "result": "8.7",
+            "flag": "High",
+            "units": "ng/mL",
+            "field-1": null,
+            "referenceInterval": [],
+            "lab": "TA"
+        },
+        {
+            "name": "CK",
+            "result": null,
+            "flag": "Normal",
+            "units": null,
+            "field-1": null,
+            "referenceInterval": [],
+            "lab": "TA"
+        },
+        {
+            "name": "Troponin",
+            "result": null,
+            "flag": "Normal",
+            "units": null,
+            "field-1": null,
+            "referenceInterval": [],
+            "lab": "TA"
+        },
+        {
+            "name": "CHEM7",
+            "result": null,
+            "flag": "Normal",
+            "units": null,
+            "field-1": null,
+            "referenceInterval": [],
+            "lab": "TA"
+        },
+        {
+            "name": "CBC",
+            "result": null,
+            "flag": "Normal",
+            "units": null,
+            "field-1": null,
+            "referenceInterval": [],
+            "lab": "TA"
+        },
+        {
+            "name": "Uric Acid, Serum",
+            "result": "8.4",
+            "flag": "Normal",
+            "units": "mg/dL",
+            "field-1": null,
+            "referenceInterval": ["3.7-8.6"],
+            "lab": "TA"
+        },
+        {
+            "name": "BUN",
+            "result": "19",
+            "flag": "Normal",
+            "units": "mg/dL",
+            "field-1": null,
+            "referenceInterval": [],
+            "lab": "TA"
+        },
+        {
+            "name": "Creatinine, Serum",
+            "result": "1",
+            "flag": "Normal",
+            "units": "mg/dL",
+            "field-1": "0.76-1.27",
+            "referenceInterval": [],
+            "lab": "TA"
+        },
+        {
+            "name": "eGFR If NonAfricn Am",
+            "result": "80",
+            "flag": "Normal",
+            "units": "mL/min/1.73",
+            "field-1": null,
+            "referenceInterval": [">59"],
+            "lab": "TA"
+        },
+        {
+            "name": "eGFR If Africn Am",
+            "result": "92",
+            "flag": "Normal",
+            "units": "mL/min/1.73",
+            "field-1": null,
+            "referenceInterval": [">59"],
+            "lab": "TA"
+        },
+        {
+            "name": "BUN/Creatinine Ratio",
+            "result": "19",
+            "flag": "Normal",
+            "units": null,
+            "field-1": null,
+            "referenceInterval": [],
+            "lab": "TA"
+        },
+        {
+            "name": "Sodium, Serum",
+            "result": "142",
+            "flag": "Normal",
+            "units": "mmol/L",
+            "field-1": null,
+            "referenceInterval": ["134-144"],
+            "lab": "TA"
+        },
+        {
+            "name": "Potassium, Serum",
+            "result": "3.9",
+            "flag": "Normal",
+            "units": "mmol/L",
+            "field-1": null,
+            "referenceInterval": ["3.5-5.2"],
+            "lab": "TA"
+        },
+        {
+            "name": "Chloride, Serum",
+            "result": "103",
+            "flag": "Normal",
+            "units": "mmol/L",
+            "field-1": null,
+            "referenceInterval": ["97-108"],
+            "lab": "TA"
+        },
+        {
+            "name": "Carbon Dioxide, Total",
+            "result": "23",
+            "flag": "Normal",
+            "units": "mmol/L",
+            "field-1": null,
+            "referenceInterval": ["18-29"],
+            "lab": "TA"
+        },
+        {
+            "name": "Calcium, Serum",
+            "result": "9.3",
+            "flag": "Normal",
+            "units": "mg/dL",
+            "field-1": null,
+            "referenceInterval": ["8.6-10.2"],
+            "lab": "TA"
+        },
+        {
+            "name": "Phosphorus, Serum",
+            "result": "3.2",
+            "flag": "Normal",
+            "units": "mg/dL",
+            "field-1": null,
+            "referenceInterval": ["2.5-4.5"],
+            "lab": "TA"
+        },
+        {
+            "name": "Protein, Total, Serum",
+            "result": "7.3",
+            "flag": "Normal",
+            "units": "g/dL",
+            "field-1": null,
+            "referenceInterval": ["6.0-8.5"],
+            "lab": "TA"
+        },
+        {
+            "name": "Albumin, Serum",
+            "result": "4.7",
+            "flag": "Normal",
+            "units": "g/dL",
+            "field-1": null,
+            "referenceInterval": ["3.6-4.8"],
+            "lab": "TA"
+        },
+        {
+            "name": "Globulin, Total",
+            "result": "2.6",
+            "flag": "Normal",
+            "units": "g/dL",
+            "field-1": null,
+            "referenceInterval": ["1.5-4.5"],
+            "lab": "TA"
+        },
+        {
+            "name": "A/G Ratio",
+            "result": "1.8",
+            "flag": "Normal",
+            "units": null,
+            "field-1": null,
+            "referenceInterval": ["1.1-2.5"],
+            "lab": "TA"
+        },
+        {
+            "name": "Bilirubin, Total",
+            "result": "0.5",
+            "flag": "Normal",
+            "units": "mg/dL",
+            "field-1": null,
+            "referenceInterval": ["0.0-1.2"],
+            "lab": "TA"
+        },
+        {
+            "name": "Alkaline Phosphatase, S",
+            "result": "89",
+            "flag": "Normal",
+            "units": "IU/L",
+            "field-1": null,
+            "referenceInterval": ["39-117"],
+            "lab": "TA"
+        },
+        {
+            "name": "LDH",
+            "result": "159",
+            "flag": "Normal",
+            "units": "IU/L",
+            "field-1": null,
+            "referenceInterval": ["121-224"],
+            "lab": "TA"
+        },
+        {
+            "name": "CMP14+LP+4AC+CBC/D/Plt",
+            "result": "070-291-4436-0",
+            "flag": "Normal",
+            "units": null,
+            "field-1": null,
+            "referenceInterval": [],
+            "lab": null
+        },
+        {
+            "name": "AST (SGOT)",
+            "result": "31",
+            "flag": "Normal",
+            "units": "IU/L",
+            "field-1": null,
+            "referenceInterval": ["0-40"],
+            "lab": "TA"
+        },
+        {
+            "name": "ALT (SGPT)",
+            "result": "36",
+            "flag": "Normal",
+            "units": "IU/L",
+            "field-1": null,
+            "referenceInterval": ["0-44"],
+            "lab": "TA"
+        },
+        {
+            "name": "Iron, Serum",
+            "result": "82",
+            "flag": "Normal",
+            "units": "ug/dL",
+            "field-1": null,
+            "referenceInterval": ["38-169"],
+            "lab": "TA"
+        },
+        {
+            "name": "Cholesterol, Total",
+            "result": "184",
+            "flag": "Normal",
+            "units": "mg/dL",
+            "field-1": null,
+            "referenceInterval": ["100-199"],
+            "lab": "TA"
+        },
+        {
+            "name": "Triglycerides",
+            "result": "264",
+            "flag": "High",
+            "units": "mg/dL",
+            "field-1": null,
+            "referenceInterval": ["0-149"],
+            "lab": "TA"
+        },
+        {
+            "name": "HDL Cholesterol",
+            "result": "33",
+            "flag": "Low",
+            "units": "mg/dL",
+            "field-1": null,
+            "referenceInterval": [">39"],
+            "lab": "TA"
+        },
+        {
+            "name": "VLDL Cholesterol Cal",
+            "result": "53",
+            "flag": "High",
+            "units": "mg/dL",
+            "field-1": null,
+            "referenceInterval": ["5-40"],
+            "lab": "TA"
+        },
+        {
+            "name": "LDL Cholesterol Calc",
+            "result": "98",
+            "flag": "Normal",
+            "units": "mg/dL",
+            "field-1": null,
+            "referenceInterval": ["0-99"],
+            "lab": "TA"
+        },
+        {
+            "name": "T. Chol/HDL Ratio",
+            "result": "5.6",
+            "flag": "High",
+            "units": "ratio units",
+            "field-1": null,
+            "referenceInterval": ["0.0-5.0"],
+            "lab": "TA"
+        },
+        {
+            "name": "Estimated CHD Risk",
+            "result": "1.2",
+            "flag": "High",
+            "units": "times avg",
+            "field-1": null,
+            "referenceInterval": ["0.0-1.0"],
+            "lab": "TA"
+        },
+        {
+            "name": "WBC",
+            "result": "9.1",
+            "flag": "Normal",
+            "units": "x10E3/uL",
+            "field-1": null,
+            "referenceInterval": ["3.4-10.8"],
+            "lab": "TA"
+        },
+        {
+            "name": "RBC",
+            "result": "4.69",
+            "flag": "Normal",
+            "units": "x10E3/uL",
+            "field-1": null,
+            "referenceInterval": ["4.14-5.80"],
+            "lab": "TA"
+        },
+        {
+            "name": "Hemoglobin",
+            "result": "12.7",
+            "flag": "Normal",
+            "units": "g/dL",
+            "field-1": null,
+            "referenceInterval": ["12.6-17.7"],
+            "lab": "TA"
+        },
+        {
+            "name": "Hematocrit",
+            "result": "37.4",
+            "flag": "Low",
+            "units": "%",
+            "field-1": null,
+            "referenceInterval": ["37.5-51.0"],
+            "lab": "TA"
+        },
+        {
+            "name": "MCV",
+            "result": "80",
+            "flag": "Normal",
+            "units": "fL",
+            "field-1": null,
+            "referenceInterval": ["79-97"],
+            "lab": "TA"
+        },
+        {
+            "name": "MCH",
+            "result": "27.1",
+            "flag": "Normal",
+            "units": "pg",
+            "field-1": null,
+            "referenceInterval": ["26.6-33.0"],
+            "lab": "TA"
+        },
+        {
+            "name": "MCHC",
+            "result": "34",
+            "flag": "Normal",
+            "units": "g/dL",
+            "field-1": null,
+            "referenceInterval": ["31.5-35.7"],
+            "lab": "TA"
+        },
+        {
+            "name": "RDW",
+            "result": "17",
+            "flag": "High",
+            "units": "%",
+            "field-1": null,
+            "referenceInterval": ["12.3-15.4"],
+            "lab": "TA"
+        },
+        {
+            "name": "Platelets",
+            "result": "236",
+            "flag": "Normal",
+            "units": "x10E3/uL",
+            "field-1": null,
+            "referenceInterval": ["150-379"],
+            "lab": "TA"
+        },
+        {
+            "name": "Neutrophils",
+            "result": "41",
+            "flag": "Normal",
+            "units": "%",
+            "field-1": null,
+            "referenceInterval": [],
+            "lab": "TA"
+        },
+        {
+            "name": "Lymphs",
+            "result": "49",
+            "flag": "Normal",
+            "units": "%",
+            "field-1": null,
+            "referenceInterval": [],
+            "lab": "TA"
+        },
+        {
+            "name": "Monocytes",
+            "result": "7",
+            "flag": "Normal",
+            "units": "%",
+            "field-1": null,
+            "referenceInterval": [],
+            "lab": "TA"
+        },
+        {
+            "name": "Eos",
+            "result": "2",
+            "flag": "Normal",
+            "units": "%",
+            "field-1": null,
+            "referenceInterval": [],
+            "lab": "TA"
+        },
+        {
+            "name": "Basos",
+            "result": "1",
+            "flag": "Normal",
+            "units": "%",
+            "field-1": null,
+            "referenceInterval": [],
+            "lab": "TA"
+        },
+        {
+            "name": "Immature Cells",
+            "result": null,
+            "flag": "Normal",
+            "units": null,
+            "field-1": null,
+            "referenceInterval": [],
+            "lab": "TA"
+        },
+        {
+            "name": "Neutrophils (Absolute)",
+            "result": "3.7",
+            "flag": "Normal",
+            "units": "x10E3/uL",
+            "field-1": null,
+            "referenceInterval": ["1.4-7.0"],
+            "lab": "TA"
+        },
+        {
+            "name": "Lymphs (Absolute)",
+            "result": "4.6",
+            "flag": "High",
+            "units": "x10E3/uL",
+            "field-1": null,
+            "referenceInterval": ["0.7-3.1"],
+            "lab": "TA"
+        },
+        {
+            "name": "Monocytes(Absolute)",
+            "result": "0.6",
+            "flag": "Normal",
+            "units": "x10E3/uL",
+            "field-1": null,
+            "referenceInterval": ["0.1-0.9"],
+            "lab": "TA"
+        },
+        {
+            "name": "Eos (Absolute)",
+            "result": "0.2",
+            "flag": "Normal",
+            "units": "x10E3/uL",
+            "field-1": null,
+            "referenceInterval": ["0.0-0.4"],
+            "lab": "TA"
+        },
+        {
+            "name": "Baso (Absolute)",
+            "result": "0.1",
+            "flag": "Normal",
+            "units": "x10E3/uL",
+            "field-1": null,
+            "referenceInterval": ["0.0-0.2"],
+            "lab": "TA"
+        }
+    ]
+}
