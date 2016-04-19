@@ -1,11 +1,22 @@
 'use strict';
 
 var service = {},
-    User = require('../models/user.model');
+    dbStorage = require('../../../config/lib/dbStorage'),
+    Promise = require('bluebird');
 
 service.createUser = (user) => {
-    user = new User(user);
-    return user.saveAsync();
+    console.log(user);
+    return new Promise((resolve, reject) => {
+        dbStorage
+            .getDb()
+            .insert(user, (err, result) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(result);
+                }
+            });
+    });
 };
 
 module.exports = service;

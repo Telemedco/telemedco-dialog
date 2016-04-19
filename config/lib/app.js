@@ -1,12 +1,12 @@
 'use strict';
 
 var config = require('../config'),
-    mongoose = require('./mongoose'),
+    cloudant = require('./cloudant'),
     express = require('./express'),
     chalk = require('chalk');
 
 module.exports.init = (done) => {
-    mongoose.connect((db) => {
+    cloudant.connect((db) => {
         var app = express.init(db);
         if (done) done(app, db, config);
     });

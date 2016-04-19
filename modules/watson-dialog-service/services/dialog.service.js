@@ -1,11 +1,21 @@
 'use strict';
 
 var service = {},
-    Dialog = require('../models/dialog.model');
+    dbStorage = require('../../../config/lib/dbStorage'),
+    Promise = require('bluebird');
 
 service.createDialog = (dialog) => {
-    dialog = new Dialog(dialog);
-    return dialog.saveAsync();
+    return new Promise((resolve, reject) => {
+        dbStorage
+            .getDb()
+            .insert(dialog, (err, result) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(result);
+                }
+            });
+    });
 };
 
 module.exports = service;
