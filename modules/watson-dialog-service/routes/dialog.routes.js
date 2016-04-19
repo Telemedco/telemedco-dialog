@@ -6,6 +6,9 @@ module.exports = (app) => {
     app.route('/conversation/history')
         .post(dialogs.create);
 
+    app.route('/conversation/history/:userId')
+        .get(dialogs.getConversationByUserId);
+
     app.route('/conversation')
         .post(dialogs.conversation);
 

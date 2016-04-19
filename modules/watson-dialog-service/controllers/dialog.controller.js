@@ -7,6 +7,16 @@ var dialogService = require('../services/dialog.service'),
     _ = require('lodash'),
     extend = require('util')._extend;
 
+exports.getConversationByUserId = (req, res, next) => {
+    return dialogService.getHistoryById(req.params.userId)
+        .then((data) => {
+            res.status(200).json(data);
+        })
+        .catch((err) => {
+            next(err);
+        });
+};
+
 exports.create = (req, res, next) => {
     return dialogValidator.validate(req.body)
         .then((dialog) => {

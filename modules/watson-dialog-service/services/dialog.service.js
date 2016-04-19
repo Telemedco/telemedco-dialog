@@ -36,4 +36,20 @@ service.createLabReport = (obj) => {
     }
 };
 
+service.getHistoryById = (id) => {
+    return new Promise((resolve, reject) => {
+        dbStorage
+            .getDb()
+            .find({
+                selector: {userId: id, type: 'conversation'}
+            }, (err, result, header) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(result);
+                }
+            });
+    });
+};
+
 module.exports = service;
