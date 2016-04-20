@@ -14,7 +14,7 @@ validator.validate = (user) => {
             convert: false,
             abortEarly: false
         })
-        .unknown(true);
+        .unknown(false);
 
     return Joibird
         .validate(user, userSchema);
