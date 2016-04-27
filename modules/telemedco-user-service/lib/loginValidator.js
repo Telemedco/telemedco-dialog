@@ -3,21 +3,21 @@
 var validator = {},
     Joibird = require('joibird');
 
-validator.validate = (body) => {
-    var userSchema = Joibird
+validator.validate = (user) => {
+    // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
+    var loginSchema = Joibird
         .object().keys({
-            firstName: Joibird.string().required(),
-            lastName: Joibird.string().required(),
-            dateOfBirth: Joibird.string().required()
+            user_id: Joibird.string().required()
         })
         .options({
             convert: false,
             abortEarly: false
         })
         .unknown(false);
+    // jscs:enable requireCamelCaseOrUpperCaseIdentifiers
 
     return Joibird
-        .validate(body, userSchema);
+        .validate(user, loginSchema);
 };
 
 module.exports = validator;
