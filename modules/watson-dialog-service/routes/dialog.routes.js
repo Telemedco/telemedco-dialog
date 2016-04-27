@@ -3,11 +3,9 @@
 var dialogs = require('../controllers/dialog.controller');
 
 module.exports = (app) => {
-    app.route('/conversation/history')
+    app.route('/api/users/:userId/conversation')
+        .get(dialogs.getConversationByUserId)
         .post(dialogs.create);
-
-    app.route('/conversation/history/:userId')
-        .get(dialogs.getConversationByUserId);
 
     app.route('/conversation')
         .post(dialogs.conversation);

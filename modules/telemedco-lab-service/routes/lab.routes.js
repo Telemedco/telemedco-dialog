@@ -4,12 +4,10 @@ var labs = require('../controllers/lab.controller');
 
 module.exports = (app) => {
 
-    app.route('/api/lab/:userId')
+    app.route('/api/users/:userId/lab')
         .get(labs.getLabReportByUserId);
 
-    app.route('/api/lab/xray/:userId')
-        .get(labs.getXrayLabReportByUserId);
-
-    app.route('/api/lab/xray')
+    app.route('/api/users/:userId/xray')
+        .get(labs.getXrayLabReportByUserId)
         .post(labs.createXrayLabReport);
 };
