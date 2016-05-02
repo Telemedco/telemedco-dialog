@@ -1,7 +1,7 @@
 'use strict';
 
 var constants  = require('./constants'),
-	_ = require('lodash');
+    _ = require('lodash');
 
 module.exports = (obj) => {
     var response = _.get(obj, 'response', []),
