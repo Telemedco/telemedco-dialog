@@ -7,7 +7,6 @@ validator.validate = (user) => {
     var userSchema = Joibird
         .object().keys({
             userId: Joibird.string().required(),
-            dialogId: Joibird.string().required(),
             conversationId: Joibird.string().required(),
             clientId: Joibird.string().required(),
             startTime: Joibird.string().required(),

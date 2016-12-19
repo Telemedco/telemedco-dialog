@@ -2,10 +2,20 @@
 
 var dialogService = require('../services/dialog.service'),
     dialogValidator = require('../lib/dialogValidator'),
-    watsonDialog = require('../lib/watsonDialog'),
-    getChoiceByQuestion = require('../lib/getChoiceByQuestion'),
     _ = require('lodash'),
-    extend = require('util')._extend;
+    config = require('../../../config/config'),
+    Conversation = require('watson-developer-cloud/conversation/v1'); 
+
+// Create the service wrapper
+var conversation = new Conversation({
+    // If unspecified here, the CONVERSATION_USERNAME and CONVERSATION_PASSWORD env properties will be checked
+    // After that, the SDK will fall back to the bluemix-provided VCAP_SERVICES environment property
+    username: config.conversation.username,
+    password: config.conversation.password,
+    url: 'https://gateway.watsonplatform.net/conversation/api',
+    version_date: '2016-10-21',
+    version: 'v1'
+});
 
 exports.getConversationByUserId = (req, res, next) => {
     return dialogService.getHistoryById(req.params.userId)
@@ -20,6 +30,8 @@ exports.getConversationByUserId = (req, res, next) => {
 exports.create = (req, res, next) => {
     return dialogValidator.validate(req.body)
         .then((dialog) => {
+            dialog.workspaceId = config.conversation.workspaceId;
+            
             return dialogService.createDialog(dialog);
         })
         .then((data) => {
@@ -35,38 +47,28 @@ exports.create = (req, res, next) => {
 };
 
 exports.conversation = (req, res, next) => {
-    // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
-    var params = extend({ dialog_id: watsonDialog.dialogId }, req.body);
-    // jscs:enable requireCamelCaseOrUpperCaseIdentifiers
-
-    watsonDialog.dialog.conversation(params, (err, results) => {
-        if (err) {
-            return next(err);
-        } else {
-            var choice = getChoiceByQuestion(results);
-            if (!_.isNull(choice)) {
-                results.choice = choice;
+    var workspace = process.env.WORKSPACE_ID || config.conversation.workspaceId;
+    
+    if (!workspace || workspace === '<workspace-id>') {
+        return res.json({
+            'output': {
+                'text': 'The app has not been configured with a workspace.'
             }
+        });
+    }
 
-            // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
-            res.status(200).json({
-                dialog_id: watsonDialog.dialogId,
-                conversation: results
-            });
-            // jscs:enable requireCamelCaseOrUpperCaseIdentifiers
-        }
-    });
-};
+    var payload = {
+        workspace_id: workspace,
+        context: req.body.context || {},
+        input: req.body.input || {}
+    };
 
-exports.profile = (req, res, next) => {
-    // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
-    var params = extend({ dialog_id: watsonDialog.dialogId }, req.body);
-    // jscs:enable requireCamelCaseOrUpperCaseIdentifiers
-    watsonDialog.dialog.getProfile(params, (err, results) => {
+    // Send the input to the conversation service
+    conversation.message(payload, function(err, data) {
         if (err) {
-            return next(err);
-        } else {
-            res.status(200).json(results);
+            return res.status(err.code || 500).json(err);
         }
+
+        return res.status(200).json(data);
     });
 };

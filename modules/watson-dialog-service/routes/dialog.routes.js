@@ -9,7 +9,4 @@ module.exports = (app) => {
 
     app.route('/conversation')
         .post(dialogs.conversation);
-
-    app.route('/profile')
-        .post(dialogs.profile);
 };
