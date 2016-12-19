@@ -28,10 +28,6 @@ module.exports.initErrorHandler = (app) => {
     }
 };
 
-module.exports.initWinstonLogger = (app) => {
-    require('./middleware')(app);
-};
-
 module.exports.initExpressErrorHandler = (app) => {
     app.use((req, res, next) => {
         var err = new Error('Not Found');
@@ -41,6 +37,7 @@ module.exports.initExpressErrorHandler = (app) => {
     });
 
     app.use((err, req, res, next) => {
+        console.log(err);
         var error = {
             code: err.code || 500,
             error: err.error || err.message
@@ -62,7 +59,6 @@ module.exports.init = (db) => {
     this.initMiddleware(app);
     this.initViewEngine(app);
     this.initErrorHandler(app);
-    this.initWinstonLogger(app);
     this.initModulesRoutes(app);
     this.initExpressErrorHandler(app);
 

@@ -1,7 +1,6 @@
 'use strict';
 
 var config = require('../config'),
-    chalk = require('chalk'),
     cloudant = require('cloudant'),
     dbStorage = require('./dbStorage');
 

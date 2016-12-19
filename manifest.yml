@@ -1,15 +1,12 @@
----
-declared-services:
-  dialog-service:
-    label: dialog
-    plan: standard
 applications:
-- services:
-  - dialog-service
-  name: telemedco-dialog-v2
-  command: node app.js
-  path: .
-  memory: 512M
-  env:
-    NODE_ENV: production
-  host: telemedco-dialog-v2
+- path: .
+  memory: 256M
+  instances: 1
+  domain: mybluemix.net
+  name: Telemedco-Conversation
+  host: telemedco-conversation
+  disk_quota: 1024M
+  services:
+  - availability-monitoring-auto
+  - Telemedco-Conversation
+  - Telemedco-Cloudant-NoSQL-DB
