@@ -16,7 +16,7 @@ module.exports.start = function start(done) {
     var _this = this;
 
     _this.init((app, db, config) => {
-        app.listen(config.port, () => {
+        app.listen(config.port, '0.0.0.0', () => {
             console.log(chalk.yellow('--'));
             console.log(chalk.green(config.title));
             console.log();
