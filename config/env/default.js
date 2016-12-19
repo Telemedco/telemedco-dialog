@@ -18,6 +18,6 @@ module.exports = {
     conversation: {
         username: '3ad0ff35-f54b-4b11-967a-14c001b1773f',
         password: 'bAzuwpot0fJQ',
-        workspaceId: 'f812b527-5bdc-4a5a-bdb1-07b1bc42df79'
+        workspaceId: '94c50bab-f3a6-49c3-9488-8474a07a74e2'
     }
 };
